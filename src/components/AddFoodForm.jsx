@@ -21,7 +21,7 @@ export default function AddFoodForm({addFoodHandler}) {
 
     const nameHandler = (e) => {
         setName(e.target.value)
-        console.log('NAME TARGET VALUE-------', e.target.value)
+        // console.log('NAME TARGET VALUE-------', e.target.value)
     }
     const caloriesHandler = (e) => {
         setCalories(e.target.value)

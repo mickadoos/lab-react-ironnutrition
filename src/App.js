@@ -4,7 +4,7 @@ import { useState } from 'react';
 import FoodBox from './components/FoodBox';
 import { Row, Divider, Button } from 'antd';
 import AddFoodForm from './components/AddFoodForm';
-import Search from 'antd/lib/transfer/search';
+import Search from './components/Search';
 
 
 

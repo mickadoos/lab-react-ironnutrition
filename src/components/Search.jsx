@@ -3,7 +3,7 @@ import { Divider, Input } from 'antd';
 import { useState } from 'react';
 
 // Iteration 5
-export default function Search({searchFood}) {
+export default function Search({search}) {
 
     const [searchName, setSearchName] = useState("")
 
@@ -12,7 +12,7 @@ export default function Search({searchFood}) {
         // e.preventDefault();
         setSearchName(e.target.value)
         console.log('TARGET VALUE-------', e.target.value)
-        searchFood(searchName)
+        search(searchName)
     }
 
   return (
