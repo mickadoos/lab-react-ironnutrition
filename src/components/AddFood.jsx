@@ -25,7 +25,7 @@ const AddFood = ({addFood}) => {
   return (
     <div className="container my-5 text-center">
       <h2>Add Food Entry</h2>
-      <form className="row gy-3" onSubmit={handleSubmit}>
+      <form className="row gy-4 my-3" onSubmit={handleSubmit}>
         <div className="col">
           <label htmlFor="inputName" className="form-label">
             Name
