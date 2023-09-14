@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import FoodCard from './FoodCard';
 
 const FoodList = ({ foodsList, deleteFunction}) => {
@@ -10,8 +9,8 @@ const FoodList = ({ foodsList, deleteFunction}) => {
         { foodsList.length 
             ? foodsList.map((food, k) => {
           return (
-            <div className="col-sm">
-              <FoodCard key={k} foodData={food} deleteFunction={deleteFunction} />
+            <div className="col-sm" key={k}>
+              <FoodCard foodData={food} deleteFunction={deleteFunction} />
             </div>
           );
         })
