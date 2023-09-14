@@ -18,18 +18,15 @@ function App() {
   };
 
   const deleteFood = (foodName) => {
-    console.log('DELETE')
-    const updatedFoods = [...foods];
+    const updatedFoods = [...foods]
     const allUpdatedFoods = [...allFoods];
    
-    console.log('foods length: ', updatedFoods.length)
     const filteredFoods = updatedFoods.filter((food) => {
       return (!(food.name === foodName));
     });
     const allFilteredFoods = allUpdatedFoods.filter((food) => {
     return (!(food.name === foodName));
     });
-    console.log('foods length 2: ', filteredFoods.length)
 
 
     setFoods(filteredFoods);
@@ -38,7 +35,6 @@ function App() {
 
   const filterFoods = (str) => {
     let filteredFoods;
-    console.log("str: ", str)
     if (str === "")
     {
       filteredFoods = allFoods;
@@ -49,7 +45,6 @@ function App() {
       })
     }
     
-    console.log("Filtered foods: ", filteredFoods)
     setFoods(filteredFoods);
   }
 
