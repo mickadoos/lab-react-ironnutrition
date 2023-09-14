@@ -10,7 +10,7 @@ const FoodList = ({ foodsList, deleteFunction}) => {
         {foodsList.map((food, k) => {
           return (
             <div className="col-sm">
-              <FoodCard key={k} foodData={food} deleteFunction={deleteFunction} toDelete={deleteFunction} />
+              <FoodCard key={k} foodData={food} deleteFunction={deleteFunction} />
             </div>
           );
         })}

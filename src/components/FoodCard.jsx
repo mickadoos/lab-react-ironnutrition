@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FoodCard = ({ foodData, deleteFunction, toDelete }) => {
+const FoodCard = ({ foodData, deleteFunction }) => {
   return (
     <div>
       <div className="card" style={{ width: '18rem' }}>
@@ -19,12 +19,6 @@ const FoodCard = ({ foodData, deleteFunction, toDelete }) => {
             onClick={() => deleteFunction(foodData.name)}
           >
             Delete
-          </button>
-          <button
-            className="btn btn-danger"
-            onClick={() => toDelete(1)}
-          >
-            Delete 2
           </button>
         </div>
       </div>
