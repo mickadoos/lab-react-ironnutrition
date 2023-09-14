@@ -17,6 +17,25 @@ function App() {
     setAllFoods(allUpdatedFoods);
   };
 
+  const deleteFood = (foodName) => {
+    console.log('DELETE')
+    const updatedFoods = [...foods];
+    const allUpdatedFoods = [...allFoods];
+   
+    console.log('foods length: ', updatedFoods.length)
+    const filteredFoods = updatedFoods.filter((food) => {
+      return (!(food.name === foodName));
+    });
+    const allFilteredFoods = allUpdatedFoods.filter((food) => {
+    return (!(food.name === foodName));
+    });
+    console.log('foods length 2: ', filteredFoods.length)
+
+
+    setFoods(filteredFoods);
+    setAllFoods(allFilteredFoods);
+  }
+
   const filterFoods = (str) => {
     let filteredFoods;
     console.log("str: ", str)
@@ -35,10 +54,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <AddFood addFood={addNewFood} />
       <SearchBar filterSearch={filterFoods} />
-      <FoodList foodsList={foods} />
+      <FoodList foodsList={foods} deleteFunction={deleteFood}/>
     </div>
   );
 }

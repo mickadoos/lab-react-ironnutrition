@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
 const SearchBar = ({filterSearch}) => {
-  const [input, setInput] = useState('');
+//   const [input, setInput] = useState('');
 
   const handleInputSearch = (e) => {
-    setInput(e.target.value);
-    // filterSearch(input);
+    // setInput(e.target.value);
+    filterSearch(e.target.value);
   };
 
-  useEffect(() => {
-    console.log("I: ", input)
-    filterSearch(input);
+//   useEffect(() => {
+//     console.log("I: ", input)
+//     filterSearch(input);
 
 
-  }, [input])
+//   }, [input])
 
   return (
     <nav className="container my-5">
@@ -25,7 +25,7 @@ const SearchBar = ({filterSearch}) => {
             className="form-control"
             aria-label="Username"
             aria-describedby="basic-addon1"
-            value={input}
+            // value={input}
             onChange={handleInputSearch}
           />
         </div>

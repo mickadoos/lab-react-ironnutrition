@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FoodCard from './FoodCard';
 
-const FoodList = ({ foodsList }) => {
+const FoodList = ({ foodsList, deleteFunction}) => {
 
   return (
     <div className="container text-center">
@@ -10,7 +10,7 @@ const FoodList = ({ foodsList }) => {
         {foodsList.map((food, k) => {
           return (
             <div className="col-sm">
-              <FoodCard key={k} foodData={food} />
+              <FoodCard key={k} foodData={food} deleteFunction={deleteFunction} toDelete={deleteFunction} />
             </div>
           );
         })}
